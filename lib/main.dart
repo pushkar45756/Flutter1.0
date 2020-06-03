@@ -1,13 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:helloworld/ui/login/LoginScreen.dart';
+import 'package:helloworld/ui/utils/MyThemes.dart';
+import 'package:helloworld/utils/Constants.dart';
+import 'package:helloworld/utils/routegenerator/RouteGenerator.dart';
 
-import 'HelloWorldApp.dart';
+import 'ui/splash/SplashScreen.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return HelloWorldApp();
+    return MaterialApp(
+        title: "Flutter 1.0",
+        theme: lightTheme(),
+        home: SplashScreen(),
+        initialRoute: Constants.ROUTE_SPLASH,
+        onGenerateRoute: RouteGenerator.generateRoute);
+    return SplashScreen();
+    return LoginScreen();
     return MaterialApp(
         title: "First Flutter",
         theme: ThemeData(primarySwatch: Colors.lightBlue),

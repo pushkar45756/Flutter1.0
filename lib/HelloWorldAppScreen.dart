@@ -1,23 +1,11 @@
 import 'package:flutter/material.dart';
 
-class HelloWorldApp extends StatelessWidget {
+class HelloWorldAppScreen extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        theme: ThemeData(primaryColor: Colors.amber), home: MyCustomText());
-  }
+  _HelloWorldAppState createState() => _HelloWorldAppState();
 }
 
-//region Stateful Widget
-class MyCustomText extends StatefulWidget {
-  @override
-  _MyCustomTextState createState() => _MyCustomTextState();
-}
-//endregion
-
-//region State
-class _MyCustomTextState extends State<MyCustomText> {
-  //region Variables
+class _HelloWorldAppState extends State<HelloWorldAppScreen> {
   num count = 0;
   String myText = "Hello World";
 
