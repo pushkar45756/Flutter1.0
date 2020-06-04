@@ -13,10 +13,10 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
 
-    Future.delayed(Duration(milliseconds: 3000), () {
+    Future.delayed(Duration(milliseconds: 1000), () {
 //      Navigator.of(context).pushReplacement(MaterialPageRoute(
 //          builder: (BuildContext context) => WeightProjectScreen()));
-      RouteGenerator.navigate(context, Constants.ROUTE_WEIGHT, "");
+      RouteGenerator.navigate(context, Constants.ROUTE_PLANET_WEIGHT, "");
     });
   }
 

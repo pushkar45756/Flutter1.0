@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/ui/login/LoginScreen.dart';
-import 'package:helloworld/ui/utils/MyThemes.dart';
+import 'package:helloworld/ui/utils/GeneralFunctions.dart';
 import 'package:helloworld/utils/Constants.dart';
 import 'package:helloworld/utils/routegenerator/RouteGenerator.dart';
 
@@ -12,8 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: "Flutter 1.0",
-        theme: lightTheme(),
+        theme: darkTheme(),
         home: SplashScreen(),
         initialRoute: Constants.ROUTE_SPLASH,
         onGenerateRoute: RouteGenerator.generateRoute);
