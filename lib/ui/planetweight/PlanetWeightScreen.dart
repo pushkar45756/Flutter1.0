@@ -3,7 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:helloworld/data/model/PlanetModel.dart';
-import 'package:helloworld/ui/utils/GeneralFunctions.dart';
+import 'package:helloworld/utils/Constants.dart';
+import 'package:helloworld/utils/routegenerator/RouteGenerator.dart';
 
 /// here our main agenda is to learn about dialogs and listView,
 /// so basically we have 3 types of dialog
@@ -162,6 +163,17 @@ class _PlanetWeightScreenState extends State<PlanetWeightScreen> {
     });
   }
 
+  void showSnackBar(String message, String actionNme) {
+    var snackBar = SnackBar(
+      content: Text(message),
+      action: SnackBarAction(
+        label: actionNme,
+        onPressed: () {},
+      ),
+    );
+    Scaffold.of(this.context).showSnackBar(snackBar);
+  }
+
   /// Row List Item Widget (in android it was row_item that was inflated in Adapter class)
   Widget getRowItem(int position) {
     return Container(
@@ -169,7 +181,9 @@ class _PlanetWeightScreenState extends State<PlanetWeightScreen> {
       color: Colors.teal,
       child: ListTile(
         onTap: () {
-          showSnackBar(context, "Item number $position tapped", "OK");
+          RouteGenerator.navigate(context, Constants.ROUTE_MOVIE_LIST,
+              planetModelList[position].name);
+          //showSnackBar("Item number $position tapped", "OK");
         },
         leading: Icon(Icons.landscape),
         trailing: Icon(Icons.wb_sunny),
@@ -194,8 +208,7 @@ class _PlanetWeightScreenState extends State<PlanetWeightScreen> {
       appBar: AppBar(
         title: Text('Planet Weight'),
       ),
-      body:
-      Container(
+      body: Container(
           child: ListView.builder(
               itemCount: planetModelList.length,
               itemBuilder: (BuildContext context, int position) {
