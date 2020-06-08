@@ -2,7 +2,8 @@ class Constants {
   /// constants related to Movie DB
   static const MOVIE_DB_BASE_URL = "https://api.themoviedb.org/3/movie/";
   static const MOVIE_DB_IMAGE_BASE_URL = "http://image.tmdb.org/t/p/w185/";
-  static const MOVIE_DB_API_KEY_V3_AUTH = "?api_key=4fccc5c11e3b4a2ba163b94dab4b4181";
+  static const MOVIE_DB_API_KEY_V3_AUTH =
+      "?api_key=4fccc5c11e3b4a2ba163b94dab4b4181";
   static const MOVIE_DB_API_KEY_V4_AUTH =
       "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0ZmNjYzVjMTFlM2I0YTJiYTE2M2I5NGRhYjRiNDE4MSIsInN1YiI6IjVkMWE2ODgyOGE4NGQyN2YzNWNjYWUzOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EYeKgHXO_qOqbr9U1kAEpKZUH04pETGDl5o9aWJ5rAo";
 
@@ -13,7 +14,9 @@ class Constants {
   /// constants related to Route Navigation
   static const String ROUTE_SPLASH = '/';
   static const String ROUTE_WEIGHT = '/weight';
+  static const String ROUTE_TEST = '/test';
   static const String ROUTE_PLANET_WEIGHT = '/planet_weight';
+  static const String ROUTE_CART_APP = '/cart_app';
   static const String ROUTE_PROFILE_LIST = '/profile_list';
   static const String ROUTE_MOVIE_LIST = '/movie_list';
   static const String ROUTE_LOGIN = '/login';
