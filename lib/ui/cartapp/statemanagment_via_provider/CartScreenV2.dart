@@ -1,46 +1,56 @@
 import 'package:flutter/material.dart';
+import 'package:helloworld/data/model/ProductModel.dart';
+import 'package:provider/provider.dart';
 
-class CartScreen extends StatelessWidget {
+class CartScreenV2 extends StatelessWidget {
   final cart;
   final sum;
 
-  CartScreen(this.cart, this.sum);
+  CartScreenV2(this.cart, this.sum);
 
   @override
   Widget build(BuildContext context) {
-    return (Column(
-      children: <Widget>[
-        Expanded(
-          flex: 7,
-          child: ListView.separated(
-            shrinkWrap: true,
-            itemCount: cart == null ? 0 : cart.length,
-            itemBuilder: (context, position) {
-              return ListTile(
-                onTap: () {},
-                leading: Icon(Icons.ac_unit),
-                trailing: Icon(Icons.wb_sunny),
-                title: Text(cart[position].name),
-                subtitle: Text("Price: Rs. ${cart[position].price}"),
-              );
-            },
-            separatorBuilder: (context, position) {
-              return Divider();
-            },
+    /// here this widget is working as consumer or listener of the notifier Model
+    /// it may also be called observer if you are coming with the android background
+    /// you may be better familiar with that.
+    return Consumer<ProductModel>(builder: (context, productModelList, child) {
+      return Column(
+        children: <Widget>[
+          Expanded(
+            flex: 7,
+            child: ListView.separated(
+              shrinkWrap: true,
+              itemCount: productModelList.getList() == null
+                  ? 0
+                  : productModelList.getList().length,
+              itemBuilder: (context, position) {
+                return ListTile(
+                  onTap: () {},
+                  leading: Icon(Icons.ac_unit),
+                  trailing: Icon(Icons.wb_sunny),
+                  title: Text(productModelList.getList()[position].name),
+                  subtitle: Text(
+                      "Price: Rs. ${productModelList.getList()[position].price}"),
+                );
+              },
+              separatorBuilder: (context, position) {
+                return Divider();
+              },
+            ),
           ),
-        ),
-        Expanded(
-          child: Text(
-            "Total Sum: Rs $sum",
-            style: TextStyle(
-                fontWeight: FontWeight.w700,
-                fontFamily: "Raleway",
-                fontSize: 20.0,
-                color: Colors.red),
-          ),
-          flex: 1,
-        )
-      ],
-    ));
+          Expanded(
+            child: Text(
+              "Total Sum: Rs ${productModelList.getSum()}",
+              style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontFamily: "Raleway",
+                  fontSize: 20.0,
+                  color: Colors.red),
+            ),
+            flex: 1,
+          )
+        ],
+      );
+    });
   }
 }

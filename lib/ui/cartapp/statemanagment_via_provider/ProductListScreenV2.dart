@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/data/model/ProductModel.dart';
+import 'package:provider/provider.dart';
 
-class ProductListScreen extends StatelessWidget {
-  final ValueSetter<ProductModel> valueSetter;
-
-  ProductListScreen(this.valueSetter);
-
+class ProductListScreenV2 extends StatelessWidget {
   var productList = [
     ProductModel(name: "Nokia 7", price: 9000),
     ProductModel(name: "Cumin Seed", price: 90),
@@ -18,13 +15,16 @@ class ProductListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-      ListView.separated(
+    return ListView.separated(
       itemCount: productList.length,
       itemBuilder: (context, position) {
         return ListTile(
           onTap: () {
-            valueSetter(productList[position]);
+            /// it will emit the model and that model will be added in the model
+            /// list, here listen is false because this widget is not interested
+            /// in listening the changes in the model-list.
+            Provider.of<ProductModel>(context, listen: false)
+                .addModel(productList[position]);
           },
           leading: Icon(Icons.ac_unit),
           trailing: Icon(Icons.wb_sunny),

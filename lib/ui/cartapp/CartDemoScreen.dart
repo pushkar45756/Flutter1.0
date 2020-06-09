@@ -39,11 +39,11 @@ class _CartDemoScreenScreenState extends State<CartDemoScreen> {
             ProductListScreen((selectedProduct) {
               setState(() {
                 cart.add(selectedProduct);
-                var sum1=0;
+                var sum1 = 0;
                 cart.forEach((f) {
                   sum1 += f.price;
                 });
-                sum= sum1;
+                sum = sum1;
               });
             }),
             CartScreen(cart, sum)

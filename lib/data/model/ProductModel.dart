@@ -1,8 +1,34 @@
-class ProductModel {
+import 'package:flutter/material.dart';
+
+/// this is extended with ChangeNotifier, as name suggest that notify when it got
+/// any changes, means it's kind of observables which can be observed by any Widget.
+class ProductModel extends ChangeNotifier {
   String name;
   num price;
 
+  num totalSum;
+
+  List<ProductModel> list;
+
+  List<ProductModel> getList() {
+    return list;
+  }
+
+  num getSum() {
+    return totalSum;
+  }
+
   ProductModel({this.name, this.price});
+
+  /// as soon as  notifyListeners is called inside this function , all of it's
+  /// listeners will be update that it's time to redraw your UI with new state
+  /// i.e. with new values, in Flutter, State is basically the new values of any
+  /// variables
+  void addModel(ProductModel model) {
+    list.add(model);
+    totalSum += model.price;
+    notifyListeners();
+  }
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(

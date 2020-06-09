@@ -7,7 +7,7 @@ class Constants {
   static const MOVIE_DB_API_KEY_V4_AUTH =
       "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0ZmNjYzVjMTFlM2I0YTJiYTE2M2I5NGRhYjRiNDE4MSIsInN1YiI6IjVkMWE2ODgyOGE4NGQyN2YzNWNjYWUzOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EYeKgHXO_qOqbr9U1kAEpKZUH04pETGDl5o9aWJ5rAo";
 
-  /// actullay this api has pagination but right now I'm using it without pagination
+  /// actually this api has pagination but right now I'm using it without pagination
   static const MOVIE_ENDPOINT_POPULAR = "popular";
   static const MOVIE_ENDPOINT_TOP_RATED = "top_rated";
 
@@ -15,8 +15,10 @@ class Constants {
   static const String ROUTE_SPLASH = '/';
   static const String ROUTE_WEIGHT = '/weight';
   static const String ROUTE_TEST = '/test';
+  static const String ROUTE_HOME = '/home';
   static const String ROUTE_PLANET_WEIGHT = '/planet_weight';
   static const String ROUTE_CART_APP = '/cart_app';
+  static const String ROUTE_CART_APP_PROVIDER = '/cart_app_with_provider';
   static const String ROUTE_PROFILE_LIST = '/profile_list';
   static const String ROUTE_MOVIE_LIST = '/movie_list';
   static const String ROUTE_LOGIN = '/login';

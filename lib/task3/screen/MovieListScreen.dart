@@ -1,11 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:helloworld/data/model/popular/PopularMovie.dart';
-import 'package:helloworld/data/model/popular/Result.dart';
-import 'package:helloworld/data/model/toprated/ResultTop.dart';
-import 'package:helloworld/data/model/toprated/TopRatedMovie.dart';
-import 'package:helloworld/data/network/APIHandler.dart';
+import 'package:helloworld/task3/data/api/APIHandler.dart';
+import 'package:helloworld/task3/data/model/popular/PopularMovie.dart';
+import 'package:helloworld/task3/data/model/popular/Result.dart';
+import 'package:helloworld/task3/data/model/toprated/ResultTop.dart';
+import 'package:helloworld/task3/data/model/toprated/TopRatedMovie.dart';
 import 'package:helloworld/utils/Constants.dart';
 
 class MovieListScreen extends StatefulWidget {

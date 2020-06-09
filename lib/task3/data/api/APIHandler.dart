@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:helloworld/data/model/popular/PopularMovie.dart';
-import 'package:helloworld/data/model/toprated/TopRatedMovie.dart';
+import 'package:helloworld/task3/data/model/popular/PopularMovie.dart';
+import 'package:helloworld/task3/data/model/toprated/TopRatedMovie.dart';
 import 'package:helloworld/utils/Constants.dart';
 import 'package:http/http.dart';
 

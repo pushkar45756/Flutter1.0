@@ -96,7 +96,7 @@ class _PlanetWeightScreenState extends State<PlanetWeightScreen> {
                   children: <Widget>[
                     TextField(
                       controller: weightEditController,
-                      keyboardType: TextInputType.number,
+                      keyboardType: TextInputType.numberWithOptions(),
                       decoration: InputDecoration(labelText: "Enter Weight"),
                     ),
                     SizedBox(
@@ -107,7 +107,9 @@ class _PlanetWeightScreenState extends State<PlanetWeightScreen> {
                       height: 10.0,
                     ),
                     RadioGroup(
-                      callback: (val) => setState(() => _planetModel = val),
+                      callback: (val) {
+                        setState(() => _planetModel = val);
+                      },
                     )
                   ],
                 ),
@@ -123,11 +125,16 @@ class _PlanetWeightScreenState extends State<PlanetWeightScreen> {
                     //showSnackBar(context, "Please enter a weight", "OK");
                     Fluttertoast.showToast(msg: "Please enter a weight");
                     return;
+                  } else if (_planetModel == null) {
+                    Fluttertoast.showToast(
+                        msg: "Please choose any planet to move further");
+                    return;
+                  } else {
+                    Navigator.of(context).pop();
+                    _addItemToPlanetList();
+                    Fluttertoast.showToast(
+                        msg: _planetModel.name + _planetModel.index.toString());
                   }
-                  Navigator.of(context).pop();
-                  _addItemToPlanetList();
-                  Fluttertoast.showToast(
-                      msg: _planetModel.name + _planetModel.index.toString());
                 },
               )
             ],
@@ -209,11 +216,22 @@ class _PlanetWeightScreenState extends State<PlanetWeightScreen> {
         title: Text('Planet Weight'),
       ),
       body: Container(
-          child: ListView.builder(
-              itemCount: planetModelList.length,
-              itemBuilder: (BuildContext context, int position) {
-                return getRowItem(position);
-              })),
+          child: Column(
+        children: <Widget>[
+          Padding(
+              padding: EdgeInsets.all(16.0),
+              child:
+                  Text("Tap on + icon and then tap Row Below to see api work")),
+          Expanded(
+            flex: 2,
+            child: ListView.builder(
+                itemCount: planetModelList.length,
+                itemBuilder: (BuildContext context, int position) {
+                  return getRowItem(position);
+                }),
+          ),
+        ],
+      )),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         tooltip: "Add Weight",

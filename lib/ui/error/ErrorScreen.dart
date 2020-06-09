@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// this is basic class for errors, a error screen
 class ErrorScreen extends StatefulWidget {
   @override
   _ErrorScreenState createState() => _ErrorScreenState();
