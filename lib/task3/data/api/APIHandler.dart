@@ -8,11 +8,13 @@ import 'package:http/http.dart';
 /// thi class is similar to API interface in out Android Projects
 class APIHandler {
   /// get Popular Movies
-  Future<PopularMovie> getPopularMovies() async {
+  static Future<PopularMovie> getPopularMovies() async {
     print("in top movies");
     String url = Constants.MOVIE_DB_BASE_URL +
         Constants.MOVIE_ENDPOINT_POPULAR +
         Constants.MOVIE_DB_API_KEY_V3_AUTH;
+
+    print("in pop movies $url");
 
     /// get Response
     var response = await get(
@@ -29,11 +31,12 @@ class APIHandler {
   }
 
   /// get Top-Rated Movies
-  Future<TopRatedMovie> getTopRatedMovies() async {
-    print("in top movies");
+  static Future<TopRatedMovie> getTopRatedMovies() async {
     String url = Constants.MOVIE_DB_BASE_URL +
         Constants.MOVIE_ENDPOINT_TOP_RATED +
         Constants.MOVIE_DB_API_KEY_V3_AUTH;
+
+    print("in top movies $url");
 
     /// get Response
     var response = await get(

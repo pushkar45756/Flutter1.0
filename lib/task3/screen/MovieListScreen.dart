@@ -21,8 +21,8 @@ class MovieListScreen extends StatefulWidget {
 
 class _MovieListScreenState extends State<MovieListScreen> {
   /// variables
-  Future<TopRatedMovie> topRatedMovies;
   Future<PopularMovie> popularMovie;
+  Future<TopRatedMovie> topRatedMovies;
 
   @override
   void initState() {
@@ -30,8 +30,8 @@ class _MovieListScreenState extends State<MovieListScreen> {
     print("init states");
 
     /// hit api
-    popularMovie = APIHandler().getPopularMovies();
-    topRatedMovies = APIHandler().getTopRatedMovies();
+    popularMovie = APIHandler.getPopularMovies();
+    topRatedMovies = APIHandler.getTopRatedMovies();
   }
 
   /// Widget to show the movie result data

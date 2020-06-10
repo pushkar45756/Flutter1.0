@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:helloworld/data/model/ProductModel.dart';
+import 'package:helloworld/task4/stmchangenotifier/model/ProductModel.dart';
 
 class ProductListScreen extends StatelessWidget {
   final ValueSetter<ProductModel> valueSetter;

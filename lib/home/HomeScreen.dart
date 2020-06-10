@@ -31,6 +31,23 @@ class HomeScreen extends StatelessWidget {
                 RouteGenerator.navigate(
                     context, Constants.ROUTE_PLANET_WEIGHT, "");
               },
+            ),
+            ListTile(
+              title: Text("State Management Normal Weight (Task 4)"),
+              onTap: () {
+                Navigator.pop(context);
+                RouteGenerator.navigate(
+                    context, Constants.ROUTE_CART_APP, "");
+              },
+            )
+            ,
+            ListTile(
+              title: Text("State Management Provider (Task 4)"),
+              onTap: () {
+                Navigator.pop(context);
+                RouteGenerator.navigate(
+                    context, Constants.ROUTE_CART_APP_PROVIDER, "");
+              },
             )
           ],
         ),

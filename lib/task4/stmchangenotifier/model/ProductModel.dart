@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 
 /// this is extended with ChangeNotifier, as name suggest that notify when it got
 /// any changes, means it's kind of observables which can be observed by any Widget.
-class ProductModel extends ChangeNotifier {
+class ProductModel with ChangeNotifier {
   String name;
   num price;
 
-  num totalSum;
+  ProductModel({this.name, this.price});
 
-  List<ProductModel> list;
+  num totalSum=0;
+
+  List<ProductModel> list=[];
 
   List<ProductModel> getList() {
     return list;
@@ -18,7 +20,7 @@ class ProductModel extends ChangeNotifier {
     return totalSum;
   }
 
-  ProductModel({this.name, this.price});
+
 
   /// as soon as  notifyListeners is called inside this function , all of it's
   /// listeners will be update that it's time to redraw your UI with new state

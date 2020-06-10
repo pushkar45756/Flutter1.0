@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:helloworld/data/model/ProductModel.dart';
+import 'package:helloworld/task4/stmchangenotifier/model/ProductModel.dart';
 import 'package:provider/provider.dart';
 
 class CartScreenV2 extends StatelessWidget {
-  final cart;
-  final sum;
-
-  CartScreenV2(this.cart, this.sum);
-
   @override
   Widget build(BuildContext context) {
     /// here this widget is working as consumer or listener of the notifier Model

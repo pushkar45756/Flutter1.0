@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:helloworld/data/model/ProductModel.dart';
 import 'package:provider/provider.dart';
 
 import 'CartScreenV2.dart';
 import 'ProductListScreenV2.dart';
+import 'model/ProductModel.dart';
 
 ///this is way two of state management here we are doing it with Provider and Notifier
 class CartDemoScreenV2 extends StatefulWidget {
   @override
-  _CartDemoScreenScreenState createState() => _CartDemoScreenScreenState();
+  _CartDemoScreenScreenV2State createState() => _CartDemoScreenScreenV2State();
 }
 
-class _CartDemoScreenScreenState extends State<CartDemoScreenV2> {
-  List<ProductModel> cart = [];
-  int sum = 0;
-
+class _CartDemoScreenScreenV2State extends State<CartDemoScreenV2> {
   @override
   Widget build(BuildContext context) {
     /// here the main Parent widget is registering itself as ChangeNotifierProvider
@@ -40,7 +37,7 @@ class _CartDemoScreenScreenState extends State<CartDemoScreenV2> {
             title: Text("Cart Demo V2"),
           ),
           body: TabBarView(
-            children: <Widget>[ProductListScreenV2(), CartScreenV2(cart, sum)],
+            children: <Widget>[ProductListScreenV2(), CartScreenV2()],
           ),
         ),
       ),

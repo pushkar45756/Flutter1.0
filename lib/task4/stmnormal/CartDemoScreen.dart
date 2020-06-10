@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:helloworld/data/model/ProductModel.dart';
-import 'package:helloworld/ui/cartapp/CartScreen.dart';
-import 'package:helloworld/ui/cartapp/ProductListScreen.dart';
+import 'package:helloworld/task4/stmchangenotifier/model/ProductModel.dart';
+import 'package:helloworld/task4/stmnormal/ProductListScreen.dart';
+
+import 'CartScreen.dart';
 
 ///this is way one of state management here we are doing it with simply having
 ///a reference of state in parent and updating it's value from child widget and
