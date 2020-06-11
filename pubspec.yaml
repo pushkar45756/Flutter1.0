@@ -26,8 +26,16 @@ dependencies:
 
   #Toast
   fluttertoast: ^4.0.0
+
+  #API Calls
   http: ^0.12.0
+
+  #State Management (way 1)
   provider: ^4.0.4
+
+  #State Management (way 2)
+  redux: ^4.0.0
+  flutter_redux: ^0.6.0
 
 
 

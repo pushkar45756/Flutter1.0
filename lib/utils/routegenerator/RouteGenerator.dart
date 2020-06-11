@@ -5,6 +5,7 @@ import 'package:helloworld/task2/PlanetWeightScreen.dart';
 import 'package:helloworld/task3/screen/MovieListScreen.dart';
 import 'package:helloworld/task4/stmchangenotifier/CartDemoScreenV2.dart';
 import 'package:helloworld/task4/stmnormal/CartDemoScreen.dart';
+import 'package:helloworld/task4/stmredux/screens/ReduxHomeScreen.dart';
 import 'package:helloworld/ui/error/ErrorScreen.dart';
 import 'package:helloworld/ui/login/LoginScreen.dart';
 import 'package:helloworld/ui/profilelist/ProfileListScreen.dart';
@@ -27,9 +28,10 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => PlanetWeightScreen());
       case Constants.ROUTE_CART_APP:
         return MaterialPageRoute(builder: (_) => CartDemoScreen());
+      case Constants.ROUTE_REDUX_HOME:
+        return MaterialPageRoute(builder: (_) => ReduxHomeScreen());
       case Constants.ROUTE_CART_APP_PROVIDER:
         return MaterialPageRoute(builder: (_) => CartDemoScreenV2());
-
       case Constants.ROUTE_PROFILE_LIST:
         return MaterialPageRoute(builder: (_) => ProfileListScreen());
       case Constants.ROUTE_MOVIE_LIST:

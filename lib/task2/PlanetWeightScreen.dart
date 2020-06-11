@@ -21,6 +21,8 @@ class _PlanetWeightScreenState extends State<PlanetWeightScreen> {
   //region Variables
   PlanetModel _planetModel;
 
+  double sliderValue = 2.0;
+
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   List<PlanetModel> planetModelList = List<PlanetModel>();
@@ -218,6 +220,18 @@ class _PlanetWeightScreenState extends State<PlanetWeightScreen> {
       body: Container(
           child: Column(
         children: <Widget>[
+          Slider(
+            value: sliderValue.toDouble(),
+            min: 0,
+            activeColor: Colors.amber,
+            max: 7,
+            onChangeEnd: (newValue) {
+              setState(() {
+                sliderValue = newValue;
+              });
+            },
+            label: "Font Size",
+          ),
           Padding(
               padding: EdgeInsets.all(16.0),
               child:

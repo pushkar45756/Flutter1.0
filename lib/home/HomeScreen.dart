@@ -48,7 +48,15 @@ class HomeScreen extends StatelessWidget {
                 RouteGenerator.navigate(
                     context, Constants.ROUTE_CART_APP_PROVIDER, "");
               },
-            )
+            ),
+            ListTile(
+              title: Text("State Management Redux (Task 4)"),
+              onTap: () {
+                Navigator.pop(context);
+                RouteGenerator.navigate(
+                    context, Constants.ROUTE_REDUX_HOME, "");
+              },
+            ),
           ],
         ),
       ),
