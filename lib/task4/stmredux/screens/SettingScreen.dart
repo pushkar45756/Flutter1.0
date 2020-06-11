@@ -12,12 +12,12 @@ class SettingScreen extends StatelessWidget {
         return Container(
           child: Column(
             children: <Widget>[
-              Text("Font Size : ${state.sliderFontSize.toInt()}"),
+              Text("Font Size : ${state.appFontSize.toInt()}"),
               Slider(
-                min: 1.0,
-                max: 100,
+                min: 0,
+                max: 1,
                 value: state.sliderFontSize,
-                onChangeEnd: (newValue) {
+                onChanged: (newValue) {
                   StoreProvider.of<AppState>(context)
                       .dispatch(FontSize(newValue));
                 },

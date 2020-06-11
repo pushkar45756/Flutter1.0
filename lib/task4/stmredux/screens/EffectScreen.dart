@@ -25,15 +25,15 @@ class EffectScreen extends StatelessWidget {
               "new value to update the visual appearance of the slider. "
               "To know when the value starts to change, or when it is done "
               "changing,",
-              style: getStyle(state.bold, state.italic),
+              style: getStyle(state.appFontSize,state.bold, state.italic),
             ),
           );
         });
   }
 
-  TextStyle getStyle([bool isBold = false, bool isItalic = false]) {
+  TextStyle getStyle([double fontSize,bool isBold = false, bool isItalic = false]) {
     return TextStyle(
-      fontSize: 18,
+      fontSize: fontSize,
       fontWeight: isBold ? FontWeight.bold : FontWeight.normal,
       fontStyle: isItalic ? FontStyle.italic : FontStyle.normal,
     );

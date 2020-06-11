@@ -6,6 +6,7 @@ import 'package:helloworld/task3/screen/MovieListScreen.dart';
 import 'package:helloworld/task4/stmchangenotifier/CartDemoScreenV2.dart';
 import 'package:helloworld/task4/stmnormal/CartDemoScreen.dart';
 import 'package:helloworld/task4/stmredux/screens/ReduxHomeScreen.dart';
+import 'package:helloworld/task4/stmreduxmiddlware/screens/ReduxMdlWareHomeScreen.dart';
 import 'package:helloworld/ui/error/ErrorScreen.dart';
 import 'package:helloworld/ui/login/LoginScreen.dart';
 import 'package:helloworld/ui/profilelist/ProfileListScreen.dart';
@@ -30,6 +31,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => CartDemoScreen());
       case Constants.ROUTE_REDUX_HOME:
         return MaterialPageRoute(builder: (_) => ReduxHomeScreen());
+      case Constants.ROUTE_REDUX_HOME_MDLWARE:
+        return MaterialPageRoute(builder: (_) => ReduxMdlWareHomeScreen());
       case Constants.ROUTE_CART_APP_PROVIDER:
         return MaterialPageRoute(builder: (_) => CartDemoScreenV2());
       case Constants.ROUTE_PROFILE_LIST:

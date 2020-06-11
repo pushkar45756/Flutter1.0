@@ -11,6 +11,9 @@ class Constants {
   static const MOVIE_ENDPOINT_POPULAR = "popular";
   static const MOVIE_ENDPOINT_TOP_RATED = "top_rated";
 
+  /// User API
+  static const API_URL_GET_USERS = "https://jsonplaceholder.typicode.com/users";
+
   /// constants related to Route Navigation
   static const String ROUTE_SPLASH = '/';
   static const String ROUTE_WEIGHT = '/weight';
@@ -19,6 +22,7 @@ class Constants {
   static const String ROUTE_PLANET_WEIGHT = '/planet_weight';
   static const String ROUTE_CART_APP = '/cart_app';
   static const String ROUTE_REDUX_HOME = '/redux_home';
+  static const String ROUTE_REDUX_HOME_MDLWARE = '/redux_home_middleware';
   static const String ROUTE_CART_APP_PROVIDER = '/cart_app_with_provider';
   static const String ROUTE_PROFILE_LIST = '/profile_list';
   static const String ROUTE_MOVIE_LIST = '/movie_list';

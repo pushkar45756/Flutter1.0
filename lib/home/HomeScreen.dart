@@ -36,13 +36,11 @@ class HomeScreen extends StatelessWidget {
               title: Text("State Management Normal Weight (Task 4)"),
               onTap: () {
                 Navigator.pop(context);
-                RouteGenerator.navigate(
-                    context, Constants.ROUTE_CART_APP, "");
+                RouteGenerator.navigate(context, Constants.ROUTE_CART_APP, "");
               },
-            )
-            ,
+            ),
             ListTile(
-              title: Text("State Management Provider (Task 4)"),
+              title: Text("STM Provider (Task 4)"),
               onTap: () {
                 Navigator.pop(context);
                 RouteGenerator.navigate(
@@ -50,11 +48,19 @@ class HomeScreen extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text("State Management Redux (Task 4)"),
+              title: Text("STM Redux (Task 4)"),
               onTap: () {
                 Navigator.pop(context);
                 RouteGenerator.navigate(
                     context, Constants.ROUTE_REDUX_HOME, "");
+              },
+            ),
+            ListTile(
+              title: Text("STM Redux Middleware (Task 4)"),
+              onTap: () {
+                Navigator.pop(context);
+                RouteGenerator.navigate(
+                    context, Constants.ROUTE_REDUX_HOME_MDLWARE, "");
               },
             ),
           ],
