@@ -3,6 +3,7 @@ import 'package:helloworld/WeightProjectScreen.dart';
 import 'package:helloworld/home/HomeScreen.dart';
 import 'package:helloworld/task2/PlanetWeightScreen.dart';
 import 'package:helloworld/task3/screen/MovieListScreen.dart';
+import 'package:helloworld/task4/stmbloc/ui/BlocHomeScreen.dart';
 import 'package:helloworld/task4/stmchangenotifier/CartDemoScreenV2.dart';
 import 'package:helloworld/task4/stmnormal/CartDemoScreen.dart';
 import 'package:helloworld/task4/stmredux/screens/ReduxHomeScreen.dart';
@@ -33,6 +34,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => ReduxHomeScreen());
       case Constants.ROUTE_REDUX_HOME_MDLWARE:
         return MaterialPageRoute(builder: (_) => ReduxMdlWareHomeScreen());
+      case Constants.ROUTE_BLOC_HOME_SCREEN:
+        return MaterialPageRoute(builder: (_) => BlocHomeScreen());
       case Constants.ROUTE_CART_APP_PROVIDER:
         return MaterialPageRoute(builder: (_) => CartDemoScreenV2());
       case Constants.ROUTE_PROFILE_LIST:

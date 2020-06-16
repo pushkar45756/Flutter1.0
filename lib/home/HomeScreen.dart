@@ -63,6 +63,14 @@ class HomeScreen extends StatelessWidget {
                     context, Constants.ROUTE_REDUX_HOME_MDLWARE, "");
               },
             ),
+            ListTile(
+              title: Text("STM Bloc (Task 4)"),
+              onTap: () {
+                Navigator.pop(context);
+                RouteGenerator.navigate(
+                    context, Constants.ROUTE_BLOC_HOME_SCREEN, "");
+              },
+            ),
           ],
         ),
       ),

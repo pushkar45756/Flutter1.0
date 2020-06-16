@@ -118,7 +118,9 @@ class _MovieListScreenState extends State<MovieListScreen> {
         title: Text(widget.planetData),
       ),
       body: Container(
-        child: Column(
+
+        child:
+        Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Padding(
@@ -147,7 +149,8 @@ class _MovieListScreenState extends State<MovieListScreen> {
     );
   }
 
-  FutureBuilder<TopRatedMovie> topRatedMoviesWidget() {
+  FutureBuilder<TopRatedMovie>
+  topRatedMoviesWidget() {
     return FutureBuilder<TopRatedMovie>(
       future: topRatedMovies,
       builder: (context, snapshot) {

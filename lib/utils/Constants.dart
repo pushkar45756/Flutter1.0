@@ -23,6 +23,7 @@ class Constants {
   static const String ROUTE_CART_APP = '/cart_app';
   static const String ROUTE_REDUX_HOME = '/redux_home';
   static const String ROUTE_REDUX_HOME_MDLWARE = '/redux_home_middleware';
+  static const String ROUTE_BLOC_HOME_SCREEN = '/bloc_home';
   static const String ROUTE_CART_APP_PROVIDER = '/cart_app_with_provider';
   static const String ROUTE_PROFILE_LIST = '/profile_list';
   static const String ROUTE_MOVIE_LIST = '/movie_list';
