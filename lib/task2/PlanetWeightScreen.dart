@@ -225,7 +225,7 @@ class _PlanetWeightScreenState extends State<PlanetWeightScreen> {
             min: 0,
             activeColor: Colors.amber,
             max: 7,
-            onChangeEnd: (newValue) {
+            onChanged: (newValue) {
               setState(() {
                 sliderValue = newValue;
               });

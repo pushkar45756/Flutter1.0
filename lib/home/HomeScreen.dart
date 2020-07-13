@@ -71,6 +71,14 @@ class HomeScreen extends StatelessWidget {
                     context, Constants.ROUTE_BLOC_HOME_SCREEN, "");
               },
             ),
+            ListTile(
+              title: Text("Widgets"),
+              onTap: () {
+                Navigator.pop(context);
+                RouteGenerator.navigate(
+                    context, Constants.ROUTE_MORE_WIDGETS, "");
+              },
+            ),
           ],
         ),
       ),
